@@ -1,5 +1,5 @@
 {
 	"name": "settings",
-	"image_path": "/home/apic/python/university_project/hair_color_change/image_save",
+	"image_path": "/home/apic/python/university_project/hair_color_change/test",
 	"model_path": "/home/apic/python/university_project/hair_color_change/save_model/03-25-2024_01-49-24/checkpoint.h5"
 }

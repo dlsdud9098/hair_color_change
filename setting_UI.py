@@ -70,7 +70,7 @@ class setting(QDialog, from_setting):
     
     # 모델 변경
     def change_model_path(self):
-        self.model_name = QFileDialog.getOpenFileName(self, '파일 선택', '', 'ALL Files(*);; tensorfflow file(*.h5 *.hdf5)')[0]
+        self.model_name = QFileDialog.getOpenFileName(self, '파일 선택', '', 'ALL Files(*);; tensorflow file(*.h5 *.hdf5)')[0]
         print(self.model_name)
         if self.model_name:
             self.model_path_label.setText(self.model_name)

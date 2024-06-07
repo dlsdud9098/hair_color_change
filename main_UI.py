@@ -65,13 +65,15 @@ class main_ui(QDialog, from_class):
     def image_change(self):
         print('image_chage 클릭')
         
+        
+        
         with open('./setting_files/settings.json', 'r') as f:
             setting_data = json.load(f)
             
         self.image_save_path = setting_data['image_path']
         self.model_path = setting_data['model_path']
         
-        if self.model_path.endwith('.h5') or self.model_path.endwith('.hdf5'):
+        if self.model_path.endswith('.h5') or self.model_path.endswith('.hdf5'):
             self.model = load_model(self.model_path)
         else:
             QMessageBox.about(self,'Error','모델 파일 오류')
@@ -81,6 +83,8 @@ class main_ui(QDialog, from_class):
         color_text = self.color_list.currentText()
         color = self.color_dict[self.color_list.currentText()]
         print(color_text, color)
+        
+        self.color_rgb.setText(str(color))
         
         # 얼굴 좌표 가져오기
         # self.faces_detection = self.img_cascade(self.im)
@@ -207,7 +211,7 @@ class main_ui(QDialog, from_class):
         
     # 이미지 경로 입력
     def image_path(self):
-        file_path = QFileDialog.getOpenFileName(self, '파일 선택', '', 'ALL Files(*.jpg)')[0]
+        file_path = QFileDialog.getOpenFileName(self, '파일 선택', '', 'ALL Files(*);; Image File(*.jpg *.png)')[0]
         # 이미지 경로 텍스트
         self.image_path_text.setText(file_path)
         # img = cv2.imread(file_path[0])
@@ -296,7 +300,7 @@ class main_ui(QDialog, from_class):
     def another_color(self):
         col = QColorDialog.getColor()
         rgb_color = self.hax_to_rgb(col.name())
-        # print(rgb_color)
+        print(rgb_color)
         
         self.color_rgb.setText(str(rgb_color))
         self.another_color = (rgb_color[2], rgb_color[1], rgb_color[0])
@@ -373,13 +377,13 @@ class main_ui(QDialog, from_class):
     def add_color(self):
         color_name = self.add_color_name.text()
         color_value = self.add_color_value.text()        
-        color_rgb = color_value.replace(' ', '').split(',')
+        color_rgb_value = color_value.replace(' ', '').split(',')
         
-        if any([i.isalpha() for i in color_rgb]):
+        if any([i.isalpha() for i in color_rgb_value]):
             QMessageBox.about(self,'Error','색상 코드 오류')
             return
         
-        color_bgr = tuple(int(c) for c in reversed(color_rgb))
+        color_bgr = tuple(int(c) for c in reversed(color_rgb_value))
         
         
         with open('./setting_files/color_list.json', 'r') as f:

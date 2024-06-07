@@ -1,0 +1,83 @@
+{
+	"리프펄": [
+		"13-LE-Pearl",
+		"9-LE-Pearl",
+		"7-LE-Pearl",
+		"5-LE-Pearl",
+		"3-LE-Pearl"
+	],
+	"블루펄": [
+		"13-B-Pearl",
+		"9-B-Pearl",
+		"7-B-Pearl",
+		"5-B-Pearl",
+		"3-B-Pearl"
+	],
+	"라벤더펄": [
+		"13-LA-Pearl",
+		"9-LA-Pearl",
+		"7-LA-Pearl",
+		"5-LA-Pearl",
+		"3-LA-Pearl"
+	],
+	"그레이펄": [
+		"13-GrayPearl",
+		"9-GrayPearl",
+		"7-GrayPearl",
+		"5-GrayPearl",
+		"3-GrayPearl"
+	],
+	"코발트 블루": [
+		"13-Cobalt-B",
+		"9-Cobalt-B",
+		"7-Cobalt-B",
+		"5-Cobalt-B",
+		"3-Cobalt-B"
+	],
+	"사파이어": [
+		"13-Sapphire",
+		"9-Sapphire",
+		"7-Sapphire",
+		"5-Sapphire",
+		"3-Sapphire"
+	],
+	"에메랄드": [
+		"13-Emerald",
+		"9-Emerald",
+		"7-Emerald",
+		"5-Emerald",
+		"3-Emerald"
+	],
+	"애미시스트": [
+		"13-Amethyst",
+		"9-Amethyst",
+		"7-Amethyst",
+		"5-Amethyst",
+		"3-Amethyst"
+	],
+	"퍼플 게넷": [
+		"13-P-Garnet",
+		"9-P-Garnet",
+		"7-P-Garnet",
+		"5-P-Garnet",
+		"3-P-Garnet"
+	],
+	"실버": [
+		"13-Silver",
+		"9-Silver",
+		"7-Silver",
+		"5-Silver",
+		"3-Silver"
+	],
+	"스모키 토파즈": [
+		"13-S-Topaz",
+		"9-S-Topaz",
+		"7-S-Topaz",
+		"5-S-Topaz",
+		"3-S-Topaz"
+	],
+	"클리어": [
+		"13-Clear",
+		"0-Clear"
+	]
+}

@@ -111,7 +111,7 @@ def get_model(input_shape=(224, 224, 3)):
 
     x = _depthwise_conv_block(skip4, 1024, strides=(2, 2), block_id=12)
     x = _depthwise_conv_block(x, 1024, block_id=13)
-    x = _depthwise_conv_block(x, 1024, block_id=14)
+    x = _depthwise_conv_block(x, 1024, block_id=14) 
 
     x = YellowBlock(x)
     x = layers.Concatenate(axis=-1)([x, skip4])
